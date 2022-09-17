@@ -1,3 +1,8 @@
+/**
+* @file sudoku_solver.hh
+* 
+* @brief Implementation of SudokuTable class
+*/
 #pragma once
 
 #include <array>
@@ -8,6 +13,9 @@
 #define LENGTH 9
 #define WIDTH 9
 
+/** 
+* @brief SudokuTable class
+*/
 class SudokuTable {
 
 private:
@@ -59,9 +67,11 @@ private:
   }
 
 public:
-  /// @brief Gets an sodoku table and solves it.
-  /// @param A std::array representing sudoku table
-  /// @return A boolean value representing whether table has been solved or not.
+  /** 
+  * @brief Main interface of SudokuTable class
+  * @param A std::array representing sudoku table
+  * @return A boolean value representing whether table has been solved or not.
+  */
   static bool solve(std::array<char, LENGTH * WIDTH> &table) {
     const auto empty_block_coordinates = find_empty_coordinates(table);
 
@@ -80,9 +90,11 @@ public:
     
     return false;
   }
-
-  /// @brief Prints the sudoku table on stdout
-  /// @param A std::array representing sudoku table
+  
+  /**
+  * @brief Prints the sudoku table on stdout
+  * @param A std::array representing sudoku table
+  */
   static void print(const std::array<char, LENGTH * WIDTH> &table) {
     for (std::size_t i = 0; i < LENGTH; ++i) {
       for (std::size_t j = 0; j < WIDTH; ++j) {
