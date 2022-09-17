@@ -11,7 +11,7 @@ You can use bazel:
 
 or g++:
 <div>
-<pre><code>$ g++ sudoku_solver_example.cc ./a.out && ./a.out
+<pre><code>$ g++ sudoku_solver_example.cc -o ./a.out && ./a.out
 </code></pre>
 </div>
 
